@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-bar">
+    <h2>🚀 Product Management</h2>
+    <div class="actions">
+      <input type="text" id="searchInput" placeholder="🔍 Search product..." onkeyup="searchProduct()">
+      <button class="add-btn" onclick="openModal()">+ Add Product</button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Actual Price</th>
+          <th>Discount Price</th>
+          <th>Sale Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="productTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- Add Product Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-box">
+    <h3>Add Product</h3>
+
+    <input type="hidden" id="editId">
+
+    <input type="text" id="name" placeholder="Product Name">
+    <input type="number" id="price1" placeholder="Actual Price">
+    <input type="number" id="price2" placeholder="Discount Price">
+    <input type="number" id="price3" placeholder="Sale Price">
+
+    <div class="modal-buttons">
+      <button onclick="saveProduct()">Save</button>
+      <button class="cancel" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

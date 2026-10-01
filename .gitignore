@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# environment variables
+.env
+.env.local
+
+# archives / zip
+*.zip
+
+# logs & cache
+*.log
+logs/
+
+# IDE / System
+.DS_Store
+.vscode/
+.idea/
+.claude/
